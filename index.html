@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BackGround Color Change</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <div class="container">
+    <h1 class="color-code">t74yery</h1>
+    <button onclick="countn()">Change color</button>
+  </div>
+
+  <script>
+    //1st methode
+    //   let array = ["red", "orange", "green"];
+
+    //   function countn() {
+    //     document.body.style.backgroundColor =
+    //       array[Math.floor(Math.random() * array.length)];
+    //   }
+
+    //2nd methode
+
+    function countn() {
+      // let random = Math.floor(Math.random() * 463594); //write this format also
+
+      let random = Math.floor(Math.random() * 463594 - 100000) + 100000; //syntax Math.random(max-min)+min
+      console.log(random);
+      document.body.style.backgroundColor = "#" + random;
+      // document.body.style = `background-color:#${random}`;
+
+      let inner = document.querySelector(".color-code");
+      inner.innerText = "#" + random;
+    }
+
+      //3rd methode
+
+      //   function countn() {
+      //     let random = Math.floor(Math.random() * 4677974).toString(16); //num ah to string ah mathuran athula 16 nu parameter nu pass pantran yanah 16 ,6 num ah grap panni tharum
+      //     console.log(random);
+      //     document.body.style.backgroundColor = "#" + random;
+
+      //     let inner = document.querySelector(".color-code");
+      //     inner.innerText = "#" + random;
+      //   }
+  </script>
+</body>
+
+</html>
